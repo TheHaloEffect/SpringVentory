@@ -8,89 +8,86 @@ public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long product_id;
+    private Long productId;
 
     @Column(name = "product_sku")
-    private String product_sku;
+    private String productSku;
 
     @Column(name = "product_name")
-    private String product_name;
+    private String productName;
 
     @Column(name = "product_description")
-    private String product_description;
+    private String productDescription;
 
     @Column(name = "product_quantity")
-    private Integer product_quantity;
+    private Integer productQuantity;
 
     @Column(name = "product_weight")
-    private Double product_weight;
+    private Double productWeight;
 
     @Column(name = "product_price")
-    private Double product_price;
+    private Double productPrice;
 
-    public Product(Long product_id, String product_sku, String product_name, String product_description, Integer product_quantity, Double product_weight, Double product_price) {
-        this.product_id = product_id;
-        this.product_sku = product_sku;
-        this.product_name = product_name;
-        this.product_description = product_description;
-        this.product_quantity = product_quantity;
-        this.product_weight = product_weight;
-        this.product_price = product_price;
+    public Product(Long productId, String productSku, String productName, String productDescription, Integer productQuantity, Double productWeight, Double productPrice) {
+        this.productId = productId;
+        this.productSku = productSku;
+        this.productName = productName;
+        this.productDescription = productDescription;
+        this.productQuantity = productQuantity;
+        this.productWeight = productWeight;
+        this.productPrice = productPrice;
     }
 
-    public Product() {
 
+    public Long getProductId() {
+        return productId;
     }
 
-    public Long getProduct_id() {
-        return product_id;
+    public String getProductSku() {
+        return productSku;
     }
 
-    public String getProduct_sku() {
-        return product_sku;
+    public void setProductSku(String productSku) {
+        this.productSku = productSku;
     }
 
-    public void setProduct_sku(String product_sku) {
-        this.product_sku = product_sku;
+    public String getProductName() {
+        return productName;
     }
 
-    public String getProduct_name() {
-        return product_name;
+    public void setProductName(String productName) {
+        this.productName = productName;
     }
 
-    public void setProduct_name(String product_name) {
-        this.product_name = product_name;
+    public String getProductDescription() {
+        return productDescription;
     }
 
-    public String getProduct_description() {
-        return product_description;
+    public void setProductDescription(String productDescription) {
+        this.productDescription = productDescription;
     }
 
-    public void setProduct_description(String product_description) {
-        this.product_description = product_description;
+    public Integer getProductQuantity() {
+        return productQuantity;
     }
 
-    public Integer getProduct_quantity() {
-        return product_quantity;
+    public void setProductQuantity(Integer productQuantity) {
+        this.productQuantity = productQuantity;
     }
 
-    public void setProduct_quantity(Integer product_quantity) {
-        this.product_quantity = product_quantity;
+    public Double getProductWeight() {
+        return productWeight;
     }
 
-    public Double getProduct_weight() {
-        return product_weight;
+    public void setProductWeight(Double productWeight) {
+        this.productWeight = productWeight;
     }
 
-    public void setProduct_weight(Double product_weight) {
-        this.product_weight = product_weight;
+    public Double getProductPrice() {
+        return productPrice;
     }
 
-    public Double getProduct_price() {
-        return product_price;
-    }
-
-    public void setProduct_price(Double product_price) {
-        this.product_price = product_price;
+    public void setProductPrice(Double productPrice) {
+        this.productPrice = productPrice;
     }
 }

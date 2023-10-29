@@ -1,9 +1,17 @@
 package com.halo.springventory.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Table(name = "products")
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
 public class Product {
 
     @Id
@@ -27,71 +35,4 @@ public class Product {
 
     @Column(name = "product_price")
     private Double productPrice;
-
-    public Product(Long productId, String productSku, String productName, String productDescription, Integer productQuantity, Double productWeight, Double productPrice) {
-        this.productId = productId;
-        this.productSku = productSku;
-        this.productName = productName;
-        this.productDescription = productDescription;
-        this.productQuantity = productQuantity;
-        this.productWeight = productWeight;
-        this.productPrice = productPrice;
-    }
-
-
-    public Long getProductId() {
-        return productId;
-    }
-
-    public void setProductId(Long productId) {
-        this.productId = productId;
-    }
-
-    public String getProductSku() {
-        return productSku;
-    }
-
-    public void setProductSku(String productSku) {
-        this.productSku = productSku;
-    }
-
-    public String getProductName() {
-        return productName;
-    }
-
-    public void setProductName(String productName) {
-        this.productName = productName;
-    }
-
-    public String getProductDescription() {
-        return productDescription;
-    }
-
-    public void setProductDescription(String productDescription) {
-        this.productDescription = productDescription;
-    }
-
-    public Integer getProductQuantity() {
-        return productQuantity;
-    }
-
-    public void setProductQuantity(Integer productQuantity) {
-        this.productQuantity = productQuantity;
-    }
-
-    public Double getProductWeight() {
-        return productWeight;
-    }
-
-    public void setProductWeight(Double productWeight) {
-        this.productWeight = productWeight;
-    }
-
-    public Double getProductPrice() {
-        return productPrice;
-    }
-
-    public void setProductPrice(Double productPrice) {
-        this.productPrice = productPrice;
-    }
 }

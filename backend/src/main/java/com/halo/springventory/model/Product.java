@@ -30,9 +30,6 @@ public class Product {
     @Column(name = "product_quantity")
     private Integer productQuantity;
 
-    @Column(name = "product_weight")
-    private Double productWeight;
-
     @Column(name = "product_price")
     private Double productPrice;
 }

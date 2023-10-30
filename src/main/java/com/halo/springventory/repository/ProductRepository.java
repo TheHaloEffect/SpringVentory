@@ -1,6 +1,7 @@
 package com.halo.springventory.repository;
 
 import com.halo.springventory.model.Product;
+import lombok.NonNull;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -13,7 +14,7 @@ import java.util.Optional;
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Long> {
 
-    Optional<Product> findById(Long id);
+    Optional<Product> findById(@NonNull Long productId);
     Product findByProductSku(String sku);
     List<Product> findByProductQuantityGreaterThan(Integer quantity);
     List<Product> findByProductPriceBetween(Double minPrice, Double maxPrice);
@@ -22,5 +23,5 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
     @Modifying
     @Query("UPDATE Product p SET p.productQuantity = :quantity WHERE p.productId = :id")
     void updateProductQuantity(@Param("id") Long id, @Param("quantity") Integer quantity);
-    void deleteById(Long id);
+    void deleteById(@NonNull Long productId);
 }
